@@ -1,3 +1,9 @@
+//Display variables
+let n1 = null;
+let op = null;
+let n2 = null;
+
+
 function add(a,b)
 {
     return a+b;
