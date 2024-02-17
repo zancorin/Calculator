@@ -12,6 +12,8 @@ const buttons = ["toy", "toy", "C", "/",
                  "1","2", "3", "-",
                  "toy", "0", "toy", "="];
 
+buttonCycle = 0;
+
 function CreateNumpad(rows, columns)
 {
     for(let j = 0; j<rows; j++)
@@ -29,6 +31,8 @@ function CreateNumpad(rows, columns)
             //Update DOM
             row.appendChild(button);
             numpad.appendChild(row);
+            button.appendChild(document.createTextNode(buttons[buttonCycle]));
+            buttonCycle+=1;
 
 
 
