@@ -25,6 +25,7 @@ function CreateNumpad(rows, columns)
         {
             const button = document.createElement("button");
             button.classList.add("button")
+            button.classList.add(buttons[buttonCycle]);
             button.setAttribute('style', `border: 1px solid red; height:50px; width:50px;`);
 
 
