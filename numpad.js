@@ -28,10 +28,21 @@ function CreateNumpad(rows, columns)
             const button = document.createElement("button");
             button.classList.add("button")
             button.classList.add(buttons[buttonCycle]);
-            button.setAttribute('style', `border: 1px solid red; height:50px; width:50px;`);
 
-
+            if(buttonCycle===0)
+            {
+                button.setAttribute('style', 'border: 1px solid orangered; height:50px; width: 50px; background-color: burlywood; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;');
+                
+            }
+            else if ((buttonCycle>=1 && buttonCycle <= 3) || buttonCycle === 7 || buttonCycle === 11)
+            {
+                button.setAttribute('style', 'border: 1px solid orangered; height:50px; width: 50px; background-color: darkgoldenrod; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;');
+            }
+            else{
+                button.setAttribute('style', 'border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;');
+            }
             //Update DOM
+
             row.appendChild(button);
             numpad.appendChild(row);
             button.appendChild(document.createTextNode(buttons[buttonCycle]));
