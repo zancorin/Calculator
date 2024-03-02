@@ -1,0 +1,40 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.calcOutline {
+
+    border:1px solid black;
+    background-color:darkorange;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    width:200px;
+    height:300px;
+}
+
+/*alignment*/
+.title,
+.displayContainer
+ {
+    display:flex;
+    justify-content: center;
+}
+
+.numpad
+{
+    display:flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.displayContainer{
+    background-color:orangered;
+    display:flex;
+    flex-direction: column;
+}
+
+.displayText{
+    align-self: flex-end;
+}

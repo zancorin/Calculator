@@ -3,14 +3,15 @@ const body = document.body;
 let numpad = document.querySelector(".numpad");
 
 //Initializations
-let rows = 6;
+let rows = 4;
 let columns = 4;
 
-const buttons = ["toy", "toy", "C", "/",
-                 "7", "8", "9", "*",
-                 "4", "5", "6", "+",
-                 "1","2", "3", "-",
-                 "toy", "0", "toy", "="];
+const buttons = [
+                 "C", "/", "*", "+",
+                 "7", "8", "9", "-",
+                 "4", "5", "6", "=",
+                 "1","2", "3", "0",
+                 ];
 
 buttonCycle = 0;
 
@@ -20,6 +21,7 @@ function CreateNumpad(rows, columns)
     {
         const row = document.createElement("div");
         row.classList.add("row");
+        row.setAttribute('style', 'display:flex; gap:5px;');
 
         for(let i = 0; i < columns; i ++)
         {
@@ -45,4 +47,4 @@ function CreateNumpad(rows, columns)
 }
 
 
-CreateNumpad(5,4);
+CreateNumpad(rows, columns);
