@@ -38,3 +38,7 @@
 .displayText{
     align-self: flex-end;
 }
+
+@keyframes clickBtn {
+  0%   {background-color:green;}
+}
