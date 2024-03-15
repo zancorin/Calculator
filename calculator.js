@@ -151,12 +151,12 @@ let clickReset = "none";
 
 const btnC = document.querySelector(`.C`);
 btnC.addEventListener('click', function(e) {
+    RegisterInput("C");
     btnC.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: burlywood; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickBtn}; animation-duration: 0.25s;`);//animation-delay: 2s;');
    // btnC.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: burlywood; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s; animation-delay: 2s;`);
    setTimeout(function() {
     btnC.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: burlywood; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s;`);
    }, 250);
-    displayText.textContent = 0;
 });
 
 const btnDivide = document.querySelector(`.divide`);
@@ -165,138 +165,144 @@ btnDivide.addEventListener('click', function(e) {
     setTimeout(function() {
     btnDivide.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: darkgoldenrod; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s;`);
    }, 250);
-    displayText.textContent = '/';
 });
 
 const btnMultiply = document.querySelector(`.multiply`);
 btnMultiply.addEventListener('click', function(e) {
+    RegisterInput("multiply");
     btnMultiply.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: darkgoldenrod; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickBtn}; animation-duration: 0.25s;`);//animation-delay: 2s;');
     setTimeout(function() {
     btnMultiply.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: darkgoldenrod; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s;`);
    }, 250);
-    displayText.textContent = '*';
 });
 
 const btnAdd = document.querySelector(`.add`);
 btnAdd.addEventListener('click', function(e) {
+    RegisterInput("add");
     btnAdd.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: darkgoldenrod; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickBtn}; animation-duration: 0.25s;`);//animation-delay: 2s;');
     setTimeout(function() {
     btnAdd.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: darkgoldenrod; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s;`);
    }, 250);
-    displayText.textContent = "+";
 });
 
 const btnSeven = document.querySelector(`.seven`);
 btnSeven.addEventListener('click', function(e) {
+    RegisterInput("seven");
     btnSeven.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickBtn}; animation-duration: 0.25s;`);//animation-delay: 2s;');
     setTimeout(function() {
     btnSeven.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s;`);
    }, 250);
-    displayText.textContent = 7;
 });
 
 const btnEight = document.querySelector(`.eight`);
 btnEight.addEventListener('click', function(e) {
+    RegisterInput("eight");
     btnEight.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickBtn}; animation-duration: 0.25s;`);//animation-delay: 2s;');
     setTimeout(function() {
     btnEight.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s;`);
    }, 250);
-    displayText.textContent = 8;
 });
 
 const btnNine = document.querySelector(`.nine`);
 btnNine.addEventListener('click', function(e) {
+    RegisterInput("nine");
     btnNine.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickBtn}; animation-duration: 0.25s;`);//animation-delay: 2s;');
     setTimeout(function() {
     btnNine.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s;`);
    }, 250);
-    displayText.textContent = 9;
 });
 
 const btnSubtract = document.querySelector(`.subtract`);
     btnSubtract.addEventListener('click', function(e) {
+    RegisterInput("subtract");
     btnSubtract.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: darkgoldenrod; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickBtn}; animation-duration: 0.25s;`);//animation-delay: 2s;');
     setTimeout(function() {
     btnSubtract
 .setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: darkgoldenrod; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s;`);
    }, 250);
-    displayText.textContent = "-";
 });
 
 const btnFour = document.querySelector(`.four`);
 btnFour.addEventListener('click', function(e) {
+    RegisterInput("four");
     btnFour.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickBtn}; animation-duration: 0.25s;`);//animation-delay: 2s;');
     setTimeout(function() {
     btnFour.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s;`);
    }, 250);
-    displayText.textContent = 4;
 });
 
 const btnFive = document.querySelector(`.five`);
 btnFive.addEventListener('click', function(e) {
+    RegisterInput("five");
     btnFive.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickBtn}; animation-duration: 0.25s;`);//animation-delay: 2s;');
     setTimeout(function() {
     btnFive.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s;`);
    }, 250);
-    displayText.textContent = 5;
 });
 
 const btnSix = document.querySelector(`.six`);
 btnSix.addEventListener('click', function(e) {
+    RegisterInput("six");
     btnSix.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickBtn}; animation-duration: 0.25s;`);//animation-delay: 2s;');
     setTimeout(function() {
     btnSix.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s;`);
    }, 250);
-    displayText.textContent = 6;
 });
 
 const btnEquals = document.querySelector(`.equals`);
 btnEquals.addEventListener('click', function(e) {
+    RegisterInput("equals");
     btnEquals.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: darkgoldenrod; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickBtn}; animation-duration: 0.25s;`);//animation-delay: 2s;');
     setTimeout(function() {
     btnEquals.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: darkgoldenrod; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s;`);
    }, 250);
-    displayText.textContent = "=";
 });
 
 const btnOne = document.querySelector(`.one`);
 btnOne.addEventListener('click', function(e) {
+    RegisterInput("one");
     btnOne.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickBtn}; animation-duration: 0.25s;`);//animation-delay: 2s;');
     setTimeout(function() {
     btnOne.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s;`);
    }, 250);
-    displayText.textContent = 1;
 });
 
 const btnTwo = document.querySelector(`.two`);
 btnTwo.addEventListener('click', function(e) {
+    RegisterInput("two");
     btnTwo.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickBtn}; animation-duration: 0.25s;`);//animation-delay: 2s;');
     setTimeout(function() {
     btnTwo.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s;`);
    }, 250);
-    displayText.textContent = 2;
 });
 
 const btnThree = document.querySelector(`.three`);
 btnThree.addEventListener('click', function(e) {
+    RegisterInput("three");
     btnThree.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickBtn}; animation-duration: 0.25s;`);//animation-delay: 2s;');
     setTimeout(function() {
     btnThree.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s;`);
    }, 250);
-    displayText.textContent = 3;
 });
 
 const btnZero = document.querySelector(`.zero`);
 btnZero.addEventListener('click', function(e) {
+    RegisterInput("zero");
     btnZero.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickBtn}; animation-duration: 0.25s;`);//animation-delay: 2s;');
     setTimeout(function() {
     btnZero.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: yellowgreen; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s;`);
    }, 250);
-    displayText.textContent = 0;
 });
 displayContainer.appendChild(displayText);
 
 
+
+
+
+function UpdateDisplay()
+{
+    displayContainer.appendChild(displayText);
+}
 //
 /*
 
@@ -312,4 +318,131 @@ displayContainer.appendChild(displayText);
 
 
 */
+let limitCount = 12;
+let currentCount = 0;
+let buttonString = '';
+function RegisterInput(buttonPressed)
+{
+    switch (buttonPressed) {
 
+        case "C":
+            //clear calculator function
+            break;
+
+        case "seven":
+            if(n1 === null && currentCount<limitCount)
+            {
+                buttonString += '7';
+                displayText.textContent = buttonString;
+                UpdateDisplay();
+                currentCount++;
+                console.log(buttonPressed);
+                console.log(n1);
+                console.log(buttonString);
+
+            }
+            break;
+
+        case "eight":
+            if(n1 === null && currentCount<limitCount)
+            {
+                buttonString += '8';
+                displayText.textContent = buttonString;
+                UpdateDisplay();
+                currentCount++;
+                console.log(buttonString);
+            }
+            break;  
+
+        case "nine":
+            if(n1 === null && currentCount<limitCount)
+            {
+                buttonString += '9';
+                displayText.textContent = buttonString;
+                UpdateDisplay();
+                currentCount++;
+                console.log(buttonString);
+            }
+                break;  
+
+        case "four":
+            if(n1 === null && currentCount<limitCount)
+            {
+                buttonString += '4';
+                displayText.textContent = buttonString;
+                UpdateDisplay();
+                currentCount++;
+                console.log(buttonString);
+            }
+            break;  
+        
+        case "five":
+            if(n1 === null && currentCount<limitCount)
+            {
+                buttonString += '5';
+                displayText.textContent = buttonString;
+                UpdateDisplay();
+                currentCount++;
+                console.log(buttonString);
+            }
+            break;  
+
+        case "six":
+            if(n1 === null && currentCount<limitCount)
+            {
+                buttonString += '6';
+                displayText.textContent = buttonString;
+                UpdateDisplay();
+                currentCount++;
+                console.log(buttonString);
+            }
+            break;  
+
+        case "one":
+            if(n1 === null && currentCount<limitCount)
+            {
+                buttonString += '1';
+                displayText.textContent = buttonString;
+                UpdateDisplay();
+                currentCount++;
+                console.log(buttonString);
+            }
+            break;  
+
+        case "two":
+            if(n1 === null && currentCount<limitCount)
+            {
+                buttonString += '2';
+                displayText.textContent = buttonString;
+                UpdateDisplay();
+                currentCount++;
+                console.log(buttonString);
+            }
+            break;  
+
+        case "three":
+            if(n1 === null && currentCount<limitCount)
+            {
+                buttonString += '3';
+                displayText.textContent = buttonString;
+                UpdateDisplay();
+                currentCount++;
+                console.log(buttonString);
+            }
+            break;  
+
+        case "zero":
+            if(n1 === null && currentCount<limitCount)
+            {
+                buttonString += '0';
+                displayText.textContent = buttonString;
+                UpdateDisplay();
+                currentCount++;
+                console.log(buttonString);
+            }
+            break;  
+        default:
+            //something
+        break;
+    }
+}
