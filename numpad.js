@@ -51,6 +51,8 @@ function CreateNumpad(rows, columns)
             if(buttonCycle===0)
             {
                 button.setAttribute('style', 'border: 1px solid orangered; height:50px; width: 50px; background-color: burlywood; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;');
+
+
             }
             else if ((buttonCycle>=1 && buttonCycle <= 3) || buttonCycle === 7 || buttonCycle === 11)
             {
@@ -78,13 +80,26 @@ function CreateNumpad(rows, columns)
 
 CreateNumpad(rows, columns);
 
+//animation none to click toreset 
+let clickBtn = "clickBtn";
+let clickReset = "none";
+
 const btnC = document.querySelector(`.C`);
 btnC.addEventListener('click', function(e) {
+    btnC.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: burlywood; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickBtn}; animation-duration: 0.25s;`);//animation-delay: 2s;');
+   // btnC.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: burlywood; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s; animation-delay: 2s;`);
+   setTimeout(function() {
+    btnC.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: burlywood; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s;`);
+   }, 250);
     displayText.textContent = 0;
 });
 
 const btnDivide = document.querySelector(`.divide`);
 btnDivide.addEventListener('click', function(e) {
+    btnDivide.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: darkgoldenrod; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickBtn}; animation-duration: 0.25s;`);//animation-delay: 2s;');
+    setTimeout(function() {
+    btnDivide.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: darkgoldenrod; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s;`);
+   }, 250);
     displayText.textContent = '/';
 });
 
@@ -175,3 +190,38 @@ displayContainer.appendChild(displayText);
 
 
 */
+
+
+/*
+declare and initalize variables for n1, op, and n2 to null
+if n1 is equal to null,
+store numbers that are clicked into a tempString variable, up to a cap
+Once an operator is pressed or the numbers are maxed out,
+convert and set the numbers from tempString to n1 (which was previous null)
+if n1 is not equal to null AND n2 is equal to null
+if an operator is clicked, set op to operator
+if n1 and op are not equal to null,
+store numbers that are clicked into a tempString variable, up to a cap
+Once equals is pressed (or another operator)
+convert and set the numbers from tempString to n2
+
+result = operate(n1, op, n2);
+text.display = result;
+set result to n1
+
+while n1 != null && op != null, && n2 != null;
+if operator is pressed, set result to n1, and new operator to op,
+store numbers that are clicked into a tempString variable, up to a cap
+Once equals is pressed
+convert and set the numbers from tempString to n2
+
+
+if C is pressed, set n1, op, and n2 to null;
+textdisplay = 0
+
+
+
+
+
+*/
+

@@ -6,16 +6,19 @@ let n2 = null;
 
 function add(a,b)
 {
+    console.log(a+b);
     return a+b;
 }
 
 function subtract(c,d)
 {
+    console.log(c-d);
     return c-d;
 }
 
 function multiply(e,f)
 {
+    console.log(e*f);
     return e*f;
 }
 
@@ -26,6 +29,7 @@ function divide(g,h)
         return "error, cannot divide by ZERO";
     }
     else{
+        console.log(g/h);
         return g/h;
     }
 }
@@ -320,7 +324,9 @@ function UpdateDisplay()
 */
 let limitCount = 12;
 let currentCount = 0;
-let buttonString = '';
+let number1String = '';
+let number2String = '';
+let lastOperatorPressed = null;
 function RegisterInput(buttonPressed)
 {
     switch (buttonPressed) {
@@ -329,16 +335,30 @@ function RegisterInput(buttonPressed)
             //clear calculator function
             break;
 
+        case "divide":
+            //clear calculator function
+            break;  
+             
+        case "multiply":
+        //clear calculator function
+            break;
+
+        case "add":
+            lastOperatorPressed = '+';
+            operate(parseInt(number1String), lastOperatorPressed, parseInt(number1String));
+            //clear calculator function
+            break;
+
         case "seven":
             if(n1 === null && currentCount<limitCount)
             {
-                buttonString += '7';
-                displayText.textContent = buttonString;
+                number1String += '7';
+                displayText.textContent = number1String;
                 UpdateDisplay();
                 currentCount++;
                 console.log(buttonPressed);
                 console.log(n1);
-                console.log(buttonString);
+                console.log(number1String);
 
             }
             break;
@@ -346,99 +366,99 @@ function RegisterInput(buttonPressed)
         case "eight":
             if(n1 === null && currentCount<limitCount)
             {
-                buttonString += '8';
-                displayText.textContent = buttonString;
+                number1String += '8';
+                displayText.textContent = number1String;
                 UpdateDisplay();
                 currentCount++;
-                console.log(buttonString);
+                console.log(number1String);
             }
             break;  
 
         case "nine":
             if(n1 === null && currentCount<limitCount)
             {
-                buttonString += '9';
-                displayText.textContent = buttonString;
+                number1String += '9';
+                displayText.textContent = number1String;
                 UpdateDisplay();
                 currentCount++;
-                console.log(buttonString);
+                console.log(number1String);
             }
                 break;  
 
         case "four":
             if(n1 === null && currentCount<limitCount)
             {
-                buttonString += '4';
-                displayText.textContent = buttonString;
+                number1String += '4';
+                displayText.textContent = number1String;
                 UpdateDisplay();
                 currentCount++;
-                console.log(buttonString);
+                console.log(number1String);
             }
             break;  
         
         case "five":
             if(n1 === null && currentCount<limitCount)
             {
-                buttonString += '5';
-                displayText.textContent = buttonString;
+                number1String += '5';
+                displayText.textContent = number1String;
                 UpdateDisplay();
                 currentCount++;
-                console.log(buttonString);
+                console.log(number1String);
             }
             break;  
 
         case "six":
             if(n1 === null && currentCount<limitCount)
             {
-                buttonString += '6';
-                displayText.textContent = buttonString;
+                number1String += '6';
+                displayText.textContent = number1String;
                 UpdateDisplay();
                 currentCount++;
-                console.log(buttonString);
+                console.log(number1String);
             }
             break;  
 
         case "one":
             if(n1 === null && currentCount<limitCount)
             {
-                buttonString += '1';
-                displayText.textContent = buttonString;
+                number1String += '1';
+                displayText.textContent = number1String;
                 UpdateDisplay();
                 currentCount++;
-                console.log(buttonString);
+                console.log(number1String);
             }
             break;  
 
         case "two":
             if(n1 === null && currentCount<limitCount)
             {
-                buttonString += '2';
-                displayText.textContent = buttonString;
+                number1String += '2';
+                displayText.textContent = number1String;
                 UpdateDisplay();
                 currentCount++;
-                console.log(buttonString);
+                console.log(number1String);
             }
             break;  
 
         case "three":
             if(n1 === null && currentCount<limitCount)
             {
-                buttonString += '3';
-                displayText.textContent = buttonString;
+                number1String += '3';
+                displayText.textContent = number1String;
                 UpdateDisplay();
                 currentCount++;
-                console.log(buttonString);
+                console.log(number1String);
             }
             break;  
 
         case "zero":
             if(n1 === null && currentCount<limitCount)
             {
-                buttonString += '0';
-                displayText.textContent = buttonString;
+                number1String += '0';
+                displayText.textContent = number1String;
                 UpdateDisplay();
                 currentCount++;
-                console.log(buttonString);
+                console.log(number1String);
             }
             break;  
         default:
