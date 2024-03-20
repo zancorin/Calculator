@@ -58,13 +58,13 @@ switch(operator)
 }
 
 
-
+/*
 console.log(add(5,2));
 console.log(subtract(5,2));
 console.log(multiply(5,2));
 console.log(divide(5,2));
 console.log(operate(5,'-',2));
-
+*/
 
 ////
 //To access html elements
@@ -149,6 +149,8 @@ function CreateNumpad(rows, columns)
 
 CreateNumpad(rows, columns);
 
+
+//BUTTON STYLING / TAKE INPUT CLICK EVENT LISTENERS
 //animation none to click toreset 
 let clickBtn = "clickBtn";
 let clickReset = "none";
@@ -344,8 +346,14 @@ function RegisterInput(buttonPressed)
             break;
 
         case "add":
-            lastOperatorPressed = '+';
-            operate(parseInt(number1String), lastOperatorPressed, parseInt(number1String));
+           // lastOperatorPressed = '+';
+            op = "+";
+            currentCount = 0;
+            if(n1 === null)
+            {
+                n1 = 0;
+            }
+            //operate(parseInt(number1String), lastOperatorPressed, parseInt(number1String));
             //clear calculator function
             break;
 
@@ -354,12 +362,21 @@ function RegisterInput(buttonPressed)
             {
                 number1String += '7';
                 displayText.textContent = number1String;
+                n1 = number1String;
                 UpdateDisplay();
                 currentCount++;
                 console.log(buttonPressed);
                 console.log(n1);
                 console.log(number1String);
 
+            }
+            else if(n1 != null && currentCount<limitCount)
+            {
+                number2String += '7';
+                displayText.textContent = number2String;
+                n2 = number2String;
+                UpdateDisplay();
+                currentCount++;
             }
             break;
 
@@ -371,6 +388,14 @@ function RegisterInput(buttonPressed)
                 UpdateDisplay();
                 currentCount++;
                 console.log(number1String);
+            }
+                        else if(n1 != null && currentCount<limitCount)
+            {
+                number2String += '8';
+                displayText.textContent = number2String;
+                n2 = number2String;
+                UpdateDisplay();
+                currentCount++;
             }
             break;  
 
@@ -417,6 +442,22 @@ function RegisterInput(buttonPressed)
                 console.log(number1String);
             }
             break;  
+
+        case "equals":
+            console.log("n1:" + n1 + "  op:" + op + "  n2:" + n2)
+            if(n1 != null && op != null && n2 != null)
+            {
+                const result = operate(parseInt(n1),op,parseInt(n2));
+                console.log(result);
+                displayText.textContent = result;
+                UpdateDisplay();
+                n1 = result;
+                op = null;
+                n2 = null;
+                number1String = '';
+                number2String = '';
+            }
+            break;
 
         case "one":
             if(n1 === null && currentCount<limitCount)
