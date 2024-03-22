@@ -337,6 +337,10 @@ function RegisterInput(buttonPressed)
 
         case "C":
             //clear calculator function
+            n1 = null;
+            op = null;
+            n2 = null;
+            displayText.textContent = 0;
             break;
 
         case "divide":
@@ -344,7 +348,14 @@ function RegisterInput(buttonPressed)
             currentCount = 0;
             if(n1 === null)
             {
-                n1 = number1String;
+                if (number1String != "")
+                {
+                    n1 = number1String;
+                }
+                else{
+                    n1 = 0;
+                }
+
             }
             //clear calculator function
             break;  
@@ -354,7 +365,14 @@ function RegisterInput(buttonPressed)
             currentCount = 0;
             if(n1 === null)
             {
-                n1 = number1String;
+                if (number1String != "")
+                {
+                    n1 = number1String;
+                }
+                else{
+                    n1 = 0;
+                }
+
             }
         //clear calculator function
             break;
@@ -365,7 +383,14 @@ function RegisterInput(buttonPressed)
             currentCount = 0;
             if(n1 === null)
             {
-                n1 = number1String;
+                if (number1String != "")
+                {
+                    n1 = number1String;
+                }
+                else{
+                    n1 = 0;
+                }
+
             }
             //operate(parseInt(number1String), lastOperatorPressed, parseInt(number1String));
             //clear calculator function
@@ -376,7 +401,14 @@ function RegisterInput(buttonPressed)
             currentCount = 0;
             if(n1 === null)
             {
-                n1 = number1String;
+                if (number1String != "")
+                {
+                    n1 = number1String;
+                }
+                else{
+                    n1 = 0;
+                }
+
             }
         //clear calculator function
             break;
