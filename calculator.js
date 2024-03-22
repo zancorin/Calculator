@@ -24,6 +24,7 @@ function multiply(e,f)
 
 function divide(g,h)
 {
+    console.log ("divide function called");
     if((g === 0 || h === 0))
     {
         return "error, cannot divide by ZERO";
@@ -167,6 +168,7 @@ btnC.addEventListener('click', function(e) {
 
 const btnDivide = document.querySelector(`.divide`);
 btnDivide.addEventListener('click', function(e) {
+    RegisterInput("divide");
     btnDivide.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: darkgoldenrod; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickBtn}; animation-duration: 0.25s;`);//animation-delay: 2s;');
     setTimeout(function() {
     btnDivide.setAttribute(`style`, `border: 1px solid orangered; height:50px; width: 50px; background-color: darkgoldenrod; box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; animation-name: ${clickReset}; animation-duration: 0.75s;`);
@@ -338,10 +340,22 @@ function RegisterInput(buttonPressed)
             break;
 
         case "divide":
+            op = "/";
+            currentCount = 0;
+            if(n1 === null)
+            {
+                n1 = number1String;
+            }
             //clear calculator function
             break;  
              
         case "multiply":
+            op = "*";
+            currentCount = 0;
+            if(n1 === null)
+            {
+                n1 = number1String;
+            }
         //clear calculator function
             break;
 
@@ -351,10 +365,20 @@ function RegisterInput(buttonPressed)
             currentCount = 0;
             if(n1 === null)
             {
-                n1 = 0;
+                n1 = number1String;
             }
             //operate(parseInt(number1String), lastOperatorPressed, parseInt(number1String));
             //clear calculator function
+            break;
+
+        case "subtract":
+            op = "-";
+            currentCount = 0;
+            if(n1 === null)
+            {
+                n1 = number1String;
+            }
+        //clear calculator function
             break;
 
         case "seven":
@@ -362,7 +386,7 @@ function RegisterInput(buttonPressed)
             {
                 number1String += '7';
                 displayText.textContent = number1String;
-                n1 = number1String;
+                //n1 = number1String;
                 UpdateDisplay();
                 currentCount++;
                 console.log(buttonPressed);
@@ -385,11 +409,12 @@ function RegisterInput(buttonPressed)
             {
                 number1String += '8';
                 displayText.textContent = number1String;
+                //n1 = number1String;
                 UpdateDisplay();
                 currentCount++;
                 console.log(number1String);
             }
-                        else if(n1 != null && currentCount<limitCount)
+                else if(n1 != null && currentCount<limitCount)
             {
                 number2String += '8';
                 displayText.textContent = number2String;
@@ -408,6 +433,14 @@ function RegisterInput(buttonPressed)
                 currentCount++;
                 console.log(number1String);
             }
+            else if(n1 != null && currentCount<limitCount)
+            {
+                number2String += '9';
+                displayText.textContent = number2String;
+                n2 = number2String;
+                UpdateDisplay();
+                currentCount++;
+            }
                 break;  
 
         case "four":
@@ -418,6 +451,14 @@ function RegisterInput(buttonPressed)
                 UpdateDisplay();
                 currentCount++;
                 console.log(number1String);
+            }
+            else if(n1 != null && currentCount<limitCount)
+            {
+                number2String += '4';
+                displayText.textContent = number2String;
+                n2 = number2String;
+                UpdateDisplay();
+                currentCount++;
             }
             break;  
         
@@ -430,6 +471,14 @@ function RegisterInput(buttonPressed)
                 currentCount++;
                 console.log(number1String);
             }
+            else if(n1 != null && currentCount<limitCount)
+            {
+                number2String += '5';
+                displayText.textContent = number2String;
+                n2 = number2String;
+                UpdateDisplay();
+                currentCount++;
+            }
             break;  
 
         case "six":
@@ -440,6 +489,14 @@ function RegisterInput(buttonPressed)
                 UpdateDisplay();
                 currentCount++;
                 console.log(number1String);
+            }
+            else if(n1 != null && currentCount<limitCount)
+            {
+                number2String += '6';
+                displayText.textContent = number2String;
+                n2 = number2String;
+                UpdateDisplay();
+                currentCount++;
             }
             break;  
 
@@ -468,6 +525,14 @@ function RegisterInput(buttonPressed)
                 currentCount++;
                 console.log(number1String);
             }
+            else if(n1 != null && currentCount<limitCount)
+            {
+                number2String += '1';
+                displayText.textContent = number2String;
+                n2 = number2String;
+                UpdateDisplay();
+                currentCount++;
+            }
             break;  
 
         case "two":
@@ -478,6 +543,14 @@ function RegisterInput(buttonPressed)
                 UpdateDisplay();
                 currentCount++;
                 console.log(number1String);
+            }
+            else if(n1 != null && currentCount<limitCount)
+            {
+                number2String += '2';
+                displayText.textContent = number2String;
+                n2 = number2String;
+                UpdateDisplay();
+                currentCount++;
             }
             break;  
 
@@ -490,6 +563,14 @@ function RegisterInput(buttonPressed)
                 currentCount++;
                 console.log(number1String);
             }
+            else if(n1 != null && currentCount<limitCount)
+            {
+                number2String += '3';
+                displayText.textContent = number2String;
+                n2 = number2String;
+                UpdateDisplay();
+                currentCount++;
+            }
             break;  
 
         case "zero":
@@ -500,6 +581,14 @@ function RegisterInput(buttonPressed)
                 UpdateDisplay();
                 currentCount++;
                 console.log(number1String);
+            }
+            else if(n1 != null && currentCount<limitCount)
+            {
+                number2String += '0';
+                displayText.textContent = number2String;
+                n2 = number2String;
+                UpdateDisplay();
+                currentCount++;
             }
             break;  
         default:

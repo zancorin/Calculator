@@ -194,7 +194,7 @@ displayContainer.appendChild(displayText);
 
 /*
 declare and initalize variables for n1, op, and n2 to null
-if n1 is equal to null,
+if n1 is equal to null, (set n1 to 0)
 store numbers that are clicked into a tempString variable, up to a cap
 Once an operator is pressed or the numbers are maxed out,
 convert and set the numbers from tempString to n1 (which was previous null)
