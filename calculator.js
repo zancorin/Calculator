@@ -27,7 +27,9 @@ function divide(g,h)
     console.log ("divide function called");
     if((g === 0 || h === 0))
     {
-        return "error, cannot divide by ZERO";
+        //displayText.textContent = "u broke me";
+        //UpdateDisplay();
+        return "u broke me";
     }
     else{
         console.log(g/h);
@@ -326,6 +328,14 @@ function UpdateDisplay()
 
 
 */
+function resetCalculator() {
+    n1 = null;
+    op = null;
+    n2 = null;
+    displayText.textContent = 0;
+}
+
+
 let limitCount = 12;
 let currentCount = 0;
 let number1String = '';
@@ -337,10 +347,7 @@ function RegisterInput(buttonPressed)
 
         case "C":
             //clear calculator function
-            n1 = null;
-            op = null;
-            n2 = null;
-            displayText.textContent = 0;
+            resetCalculator();
             break;
 
         case "divide":
@@ -536,6 +543,10 @@ function RegisterInput(buttonPressed)
             console.log("n1:" + n1 + "  op:" + op + "  n2:" + n2)
             if(n1 != null && op != null && n2 != null)
             {
+                if(n1 === "u broke me")
+                {
+                    n1 = 0;
+                }
                 const result = operate(parseInt(n1),op,parseInt(n2));
                 console.log(result);
                 displayText.textContent = result;
