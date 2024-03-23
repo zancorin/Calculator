@@ -361,10 +361,14 @@ function RegisterInput(buttonPressed)
                 {
                     n1 = 0;
                 }
-                const result = operate(parseInt(n1),op,parseInt(n2));
+                let result = operate(parseFloat(n1),op,parseFloat(n2));
+                let roundedNum = result.toFixed(2);
+                result= parseFloat(roundedNum);
+                console.log("result: " + result + "  roundedNum: " + roundedNum);
                 console.log(result);
                 displayText.textContent = result;
                 UpdateDisplay();
+
                 n1 = result;
                 op = null;
                 n2 = null;
@@ -396,10 +400,13 @@ function RegisterInput(buttonPressed)
             {
                 n1 = 0;
             }
-            const result = operate(parseInt(n1),op,parseInt(n2));
+            let result = operate(parseFloat(n1),op,parseFloat(n2));
+            let roundedNum = result.toFixed(2);
+            result= parseFloat(roundedNum);
             console.log(result);
             displayText.textContent = result;
             UpdateDisplay();
+
             n1 = result;
             op = null;
             n2 = null;
@@ -431,7 +438,9 @@ function RegisterInput(buttonPressed)
                {
                    n1 = 0;
                }
-               const result = operate(parseInt(n1),op,parseInt(n2));
+               let result = operate(parseFloat(n1),op,parseFloat(n2));
+               let roundedNum = result.toFixed(2);
+               result= parseFloat(roundedNum);
                console.log(result);
                displayText.textContent = result;
                UpdateDisplay();
@@ -466,7 +475,9 @@ function RegisterInput(buttonPressed)
             {
                 n1 = 0;
             }
-            const result = operate(parseInt(n1),op,parseInt(n2));
+            let result = operate(parseFloat(n1),op,parseFloat(n2));
+            let roundedNum = result.toFixed(2);
+            result= parseFloat(roundedNum);
             console.log(result);
             displayText.textContent = result;
             UpdateDisplay();
@@ -476,7 +487,7 @@ function RegisterInput(buttonPressed)
             number1String = '';
             number2String = '';
         }
-        
+
             op = "-";
             currentCount = 0;
             if(n1 === null)
@@ -620,7 +631,9 @@ function RegisterInput(buttonPressed)
                 {
                     n1 = 0;
                 }
-                const result = operate(parseInt(n1),op,parseInt(n2));
+                let result = operate(parseFloat(n1),op,parseFloat(n2));
+                let roundedNum = result.toFixed(2);
+                result= parseFloat(roundedNum);
                 console.log(result);
                 displayText.textContent = result;
                 UpdateDisplay();
