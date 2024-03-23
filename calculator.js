@@ -332,7 +332,10 @@ function resetCalculator() {
     n1 = null;
     op = null;
     n2 = null;
-    displayText.textContent = 0;
+    displayText.textContent = '0';
+    currentCount = 0;
+   // number1String = '';
+   // number2String = '';
 }
 
 
