@@ -334,8 +334,8 @@ function resetCalculator() {
     n2 = null;
     displayText.textContent = '0';
     currentCount = 0;
-   // number1String = '';
-   // number2String = '';
+    number1String = '';
+    number2String = '';
 }
 
 
@@ -354,6 +354,24 @@ function RegisterInput(buttonPressed)
             break;
 
         case "divide":
+
+            if(n1 != null && op != null && n2 != null)
+            {
+                if(n1 === "u broke me")
+                {
+                    n1 = 0;
+                }
+                const result = operate(parseInt(n1),op,parseInt(n2));
+                console.log(result);
+                displayText.textContent = result;
+                UpdateDisplay();
+                n1 = result;
+                op = null;
+                n2 = null;
+                number1String = '';
+                number2String = '';
+            }
+
             op = "/";
             currentCount = 0;
             if(n1 === null)
@@ -371,6 +389,24 @@ function RegisterInput(buttonPressed)
             break;  
              
         case "multiply":
+
+        if(n1 != null && op != null && n2 != null)
+        {
+            if(n1 === "u broke me")
+            {
+                n1 = 0;
+            }
+            const result = operate(parseInt(n1),op,parseInt(n2));
+            console.log(result);
+            displayText.textContent = result;
+            UpdateDisplay();
+            n1 = result;
+            op = null;
+            n2 = null;
+            number1String = '';
+            number2String = '';
+        }
+
             op = "*";
             currentCount = 0;
             if(n1 === null)
@@ -389,6 +425,22 @@ function RegisterInput(buttonPressed)
 
         case "add":
            // lastOperatorPressed = '+';
+           if(n1 != null && op != null && n2 != null)
+           {
+               if(n1 === "u broke me")
+               {
+                   n1 = 0;
+               }
+               const result = operate(parseInt(n1),op,parseInt(n2));
+               console.log(result);
+               displayText.textContent = result;
+               UpdateDisplay();
+               n1 = result;
+               op = null;
+               n2 = null;
+               number1String = '';
+               number2String = '';
+           }
             op = "+";
             currentCount = 0;
             if(n1 === null)
@@ -407,6 +459,24 @@ function RegisterInput(buttonPressed)
             break;
 
         case "subtract":
+
+        if(n1 != null && op != null && n2 != null)
+        {
+            if(n1 === "u broke me")
+            {
+                n1 = 0;
+            }
+            const result = operate(parseInt(n1),op,parseInt(n2));
+            console.log(result);
+            displayText.textContent = result;
+            UpdateDisplay();
+            n1 = result;
+            op = null;
+            n2 = null;
+            number1String = '';
+            number2String = '';
+        }
+        
             op = "-";
             currentCount = 0;
             if(n1 === null)
